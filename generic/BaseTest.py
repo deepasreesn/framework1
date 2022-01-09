@@ -7,8 +7,8 @@ class BaseTest:
     xl_path="./data/input.xlsx"
     @pytest.fixture(autouse=True)
     def open_app(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
-        #driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",options=ChromiumOptions())
+        #driver = webdriver.Chrome(ChromeDriverManager().install())
+        driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub",options=ChromiumOptions())
         driver.implicitly_wait(10)
         driver.maximize_window()
         driver.get("https://demo.actitime.com/login.do")
