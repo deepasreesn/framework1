@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
-#from selenium.webdriver.chrome.options import ChromiumOptions
+from selenium.webdriver.chrome.options import ChromiumOptions
 class BaseTest:
     xl_path="./data/input.xlsx"
     @pytest.fixture(autouse=True)
